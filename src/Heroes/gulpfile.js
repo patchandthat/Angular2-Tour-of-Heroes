@@ -17,15 +17,15 @@ var styles = [
 ];
 
 var scripts = [
-    { src: "node_modules/es6-shim/es6-shim.min.js", dest: dirs.scriptRoot + "es6-shim" },
-    { src: "node_modules/zone.js/dist/zone.js", dest: dirs.scriptRoot + "zone.js/dist" },
-    { src: "node_modules/systemjs/dist/system-polyfills.js", dest: dirs.scriptRoot + "systemjs/dist" },
-    { src: "node_modules/systemjs/dist/system.src.js", dest: dirs.scriptRoot + "systemjs/dist" },
-    { src: "node_modules/reflect-metadata/Reflect.js", dest: dirs.scriptRoot + "reflect" },
-    { src: "node_modules/jquery/dist/jquery.*js", dest: dirs.scriptRoot + "jquery" },
-    { src: "node_modules/bootstrap/dist/js/bootstrap*.js", dest: dirs.scriptRoot + "bootstrap" },
+    { src: "node_modules/es6-shim/es6-shim.min.js", dest: dirs.scriptRoot },
+    { src: "node_modules/zone.js/dist/zone.js", dest: dirs.scriptRoot },
+    { src: "node_modules/systemjs/dist/system-polyfills.js", dest: dirs.scriptRoot  },
+    { src: "node_modules/systemjs/dist/system.src.js", dest: dirs.scriptRoot },
+    { src: "node_modules/reflect-metadata/Reflect.js", dest: dirs.scriptRoot },
+    { src: "node_modules/jquery/dist/jquery.*js", dest: dirs.scriptRoot },
+    { src: "node_modules/bootstrap/dist/js/bootstrap*.js", dest: dirs.scriptRoot },
     { src: "./systemjs.config.js", dest: dirs.scriptRoot },
-    { src: "node_modules/rxjs/bundles/rx.js", dest: dirs.scriptRoot + "rxjs/bundles" },
+    { src: "node_modules/rxjs/**/*.js", dest: dirs.scriptRoot + "rxjs" },
     { src: "node_modules/angular2-in-memory-web-api/*.js", dest: dirs.scriptRoot + "angular2-in-memory-web-api" },
     { src: "node_modules/@angular/**/*.js", dest: dirs.scriptRoot + "@angular" }
 ];
