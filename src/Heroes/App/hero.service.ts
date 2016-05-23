@@ -9,4 +9,10 @@ export class HeroService {
             resolve => setTimeout(() => resolve(HEROES), 2000) // 2 Sec
         );
     }
+
+    getHero(id: number) : Promise<Hero> {
+        return Promise.resolve(HEROES).then(
+            heroes => heroes.filter(hero => hero.id === id)[0]
+        );
+    }
 }
