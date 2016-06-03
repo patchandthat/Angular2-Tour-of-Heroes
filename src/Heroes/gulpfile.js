@@ -1,10 +1,11 @@
-/// <binding AfterBuild='copy-templates' Clean='clean' />
+/// <binding BeforeBuild='clean-app' AfterBuild='copy-styles, copy-templates' Clean='clean, copy-scripts' />
 /*
 This file in the main entry point for defining Gulp tasks and using Gulp plugins.
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require("gulp");
+var watch = require("gulp-watch");
 var clean = require("gulp-clean");
 
 var dirs = {
@@ -38,6 +39,12 @@ gulp.task("clean",
             .pipe(clean());
     });
 
+gulp.task("clean-app", 
+    () => {
+        gulp.src("./wwwroot/app")
+            .pipe(clean());
+    })
+
 gulp.task("copy-scripts",
     function () {
         scripts.forEach(function(s) {
@@ -54,6 +61,6 @@ gulp.task("copy-styles",
 
 gulp.task("copy-templates",
     () => {
-        gulp.src("./App/*.html")
+        gulp.src(["./App/*.html", "./App/*.css"])
             .pipe(gulp.dest("./wwwroot/app"));
     });

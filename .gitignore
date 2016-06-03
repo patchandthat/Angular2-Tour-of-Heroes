@@ -3,3 +3,5 @@ src/Heroes/wwwroot/scripts/
 src/Heroes/wwwroot/css/
 src/Heroes/wwwroot/app/
 .vs/
+src/Heroes/Heroes.xproj.user
+Heroes.sln.DotSettings.user
