@@ -2,8 +2,7 @@
 import { provide }    from '@angular/core';
 import { XHRBackend } from '@angular/http';
 
-// Todo Sort this path out
-import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
+import { InMemoryBackendService, SEED_DATA } from '../node_modules/angular2-in-memory-web-api/core';
 import { InMemoryDataService }               from './in-memory-data.service';
 
 import { bootstrap }    from "@angular/platform-browser-dynamic";

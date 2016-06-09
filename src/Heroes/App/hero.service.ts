@@ -2,7 +2,13 @@
 import { Headers, Http } from '@angular/http';
 import { Hero } from "./hero";
 
-// Todo Why you no resolve?
+/*
+    Nb. there's an issue in v0.4 the VS typescript service which may prevent the following import from resolving correctly
+    A workaround is here: http://stackoverflow.com/questions/37030963/angular-2-2-0-0-rc-1-property-map-does-not-exist-on-type-observableresponse
+    Overwrite your "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TypeScript\typescriptServices.js"
+    with the content here "https://raw.githubusercontent.com/Microsoft/TypeScript/Fix8518/lib/typescriptServices.js".
+    There is a line "ts.servicesVersion = "0.5";" - change this to 0.4 to prevent VS failing an assertion when opening the project.
+ */
 import "rxjs/add/operator/toPromise";
 
 @Injectable()
