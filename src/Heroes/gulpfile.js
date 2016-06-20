@@ -39,11 +39,11 @@ gulp.task("clean",
             .pipe(clean());
     });
 
-gulp.task("clean-app", 
+gulp.task("clean-app",
     () => {
         gulp.src("./wwwroot/app")
             .pipe(clean());
-    })
+    });
 
 gulp.task("copy-scripts",
     function () {

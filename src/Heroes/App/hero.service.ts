@@ -1,5 +1,5 @@
 ﻿import { Injectable } from "@angular/core";
-import { Headers, Http } from '@angular/http';
+import { Headers, Http } from "@angular/http";
 import { Hero } from "./hero";
 
 /*
@@ -10,11 +10,12 @@ import { Hero } from "./hero";
     There is a line "ts.servicesVersion = "0.5";" - change this to 0.4 to prevent VS failing an assertion when opening the project.
  */
 import "rxjs/add/operator/toPromise";
+//import "../node_modules/rxjs/add/operator/toPromise";
 
 @Injectable()
 export class HeroService {
 
-    private heroesUrl = 'app/heroes';  // URL to web api
+    private heroesUrl = "app/heroes";  // URL to web api
 
     constructor(private http: Http) { }
 
@@ -40,7 +41,7 @@ export class HeroService {
 
     delete(hero: Hero) {
         let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+        headers.append("Content-Type", "application/json");
 
         let url = `${this.heroesUrl}/${hero.id}`;
 
@@ -53,7 +54,7 @@ export class HeroService {
     // Add new Hero
     private post(hero: Hero): Promise<Hero> {
         let headers = new Headers({
-            'Content-Type': 'application/json'
+            'Content-Type': "application/json"
         });
 
         return this.http
@@ -66,7 +67,7 @@ export class HeroService {
     // Update existing Hero
     private put(hero: Hero) {
         let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+        headers.append("Content-Type", "application/json");
 
         let url = `${this.heroesUrl}/${hero.id}`;
 
